@@ -184,6 +184,7 @@ def W_klient():
         'Turbo',
         'Super',
         'Best',
+        'Most',
         None,
         None,
         None,
@@ -195,11 +196,17 @@ def W_klient():
         'Pol',
         'Beton',
         'Cement',
+        'Kop',
+        'Mosto',
+        'Rud',
     )
     C = (
         'bud',
         'ex',
         'ix'
+        'stal',
+        'most',
+        'szyb',
     )
     D = (
         ', Inc.',
@@ -212,13 +219,18 @@ def W_klient():
     )
 
     BRANZA = (
-        'rozrywka',
+        'entertainment',
         'film',
-        'muzyka',
-        'budownictwo',
-        'rolnictwo',
-        'informatyka',
-        'sektor publiczny',
+        'music production',
+        'construction',
+        'farming',
+        'it',
+        'public sector',
+        'defence',
+        'military',
+        'turism',
+        'engineering',
+        'mining',
     )
 
     def nazwa():
@@ -236,7 +248,7 @@ def W_klient():
         return n
 
     values = []
-    for i in range(10):
+    for i in range(30):
         values_line = "({nazwa}, {branza})".format(
             nazwa = repr(nazwa()),
             branza = repr(random.choice(BRANZA)),
@@ -278,6 +290,12 @@ def W_projekt(lower_dates, upper_dates):
         'Turbo {}',
         '{} 3000',
         'New-Generation {}',
+        '{} Reimagined',
+        'Redesigned {}',
+        '{} XL',
+        'Awesome {}',
+        '{} of the future',
+        '{} of tomorrow',
     )
     WHAT_FOR = (
         'Food',
@@ -289,12 +307,25 @@ def W_projekt(lower_dates, upper_dates):
         'University',
         'Academia',
         'Industry',
+        'Minig',
+        'Gaming',
+        'Musical',
+        'Men',
+        'Women',
+        'Children',
+        'Animals',
+        'Shrews',
+        'Pirates',
+        'Tools',
+        'Sharks',
+        'Tornados',
+        'Water',
     )
     def nazwa():
         return random.choice(STARTUP_TEMPLATE).format(random.choice(WHAT_FOR))
 
     values = []
-    for i in range(10):
+    for i in range(40):
         data_rozpoczecia = random.choice(lower_dates)
         data_zakonczenia = random.choice(lower_dates + upper_dates)
         while data_rozpoczecia[2] >= data_zakonczenia[2]:
