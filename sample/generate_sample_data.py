@@ -4,6 +4,8 @@ import datetime
 import random
 
 
+random.seed(42_1337_20190116_2034_1995_1989_2048)
+
 # Generic generators
 
 IMIONA = (
