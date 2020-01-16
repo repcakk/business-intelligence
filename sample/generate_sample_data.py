@@ -70,6 +70,8 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
     matched_projekts = set()
     projekts_for = {}
 
+    F_pracownik_w_projekcie_id = 1
+
     values = []
     for each in pracownik:
         prs = set()
@@ -98,11 +100,12 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
             czas_trwania = (pr_pr_end[2] - pr_pr_begin[2]).days
 
             values_line = (
-                "({czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
+                "({id}, {czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
                 ", {klient_id}, {etap}, {data_rozpoczecia}, {data_zakonczenia}"
                 ", {tempo_pracy}, {uzyskany_dochod}"
                 ")"
             ).format(
+                id = F_pracownik_w_projekcie_id,
                 czas_trwania = czas_trwania,
                 pracownik_id = each['id'],
                 projekt_id = pr['id'],
@@ -117,6 +120,8 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
                 uzyskany_dochod = random.randint(100_000, 10_000_000),
             )
             values.append(values_line)
+
+            F_pracownik_w_projekcie_id += 1
 
     for each in sorted(all_projekts - matched_projekts):
         pr = list(filter(lambda x: x['id'] == each, projekt))[0]
@@ -139,11 +144,12 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
         czas_trwania = (pr_pr_end[2] - pr_pr_begin[2]).days
 
         values_line = (
-            "({czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
+            "({id}, {czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
             ", {klient_id}, {etap}, {data_rozpoczecia}, {data_zakonczenia}"
             ", {tempo_pracy}, {uzyskany_dochod}"
             ")"
         ).format(
+            id = F_pracownik_w_projekcie_id,
             czas_trwania = czas_trwania,
             pracownik_id = each['id'],
             projekt_id = pr['id'],
@@ -159,6 +165,8 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
         )
         values.append(values_line)
 
+        F_pracownik_w_projekcie_id += 1
+
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
 
@@ -167,15 +175,19 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
 def F_technologie_pracownika(pracownik_no, technologia_no):
     insert_statement = "INSERT INTO F_technologie_pracownika values\n  {}\n;"
 
+    F_technologie_pracownika_id = 1
+
     values = []
     for i in range(1, pracownik_no + 1):
         techs = random.sample(range(1, technologia_no + 1), random.randint(2, 5))
         for t in techs:
-            values_line = "({pracownik_id}, {technologia_id})".format(
+            values_line = "({id}, {pracownik_id}, {technologia_id})".format(
+                id = F_technologie_pracownika_id,
                 pracownik_id = i,
                 technologia_id = t,
             )
             values.append(values_line)
+            F_technologie_pracownika_id += 1
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
@@ -245,7 +257,8 @@ def W_data(): # done
             '{}-{}-{}'.format(y, m, d),
             '%Y-%m-%d',
         )
-        values_line = "({rok}, {pora_roku}, {miesiac}, {dzien})".format(
+        values_line = "({id}, {rok}, {pora_roku}, {miesiac}, {dzien})".format(
+            id = i,
             rok = y,
             pora_roku = repr(pp),
             miesiac = repr(mp),
@@ -271,7 +284,8 @@ def W_data(): # done
             '{}-{}-{}'.format(y, m, d),
             '%Y-%m-%d',
         )
-        values_line = "({rok}, {pora_roku}, {miesiac}, {dzien})".format(
+        values_line = "({id}, {rok}, {pora_roku}, {miesiac}, {dzien})".format(
+            id = i,
             rok = y,
             pora_roku = repr(pp),
             miesiac = repr(mp),
@@ -298,14 +312,15 @@ def W_data(): # done
             p = REV_MIESIACE_PORA_ROKU[dt.month]
             pp = PORA_ROKU[p]
             mp = MIESIACE[p][dt.month]
-            values_line = "({rok}, {pora_roku}, {miesiac}, {dzien})".format(
+            values_line = "({id}, {rok}, {pora_roku}, {miesiac}, {dzien})".format(
+                id = i,
                 rok = dt.year,
                 pora_roku = repr(pp),
                 miesiac = repr(mp),
                 dzien = dt.day,
             )
-            values.append((i + 1, values_line, dt))
-            raw_values.append((i + 1, values_line, dt))
+            values.append((i, values_line, dt))
+            raw_values.append((i, values_line, dt))
 
     print(insert_statement.format("\n, ".join(map(lambda x: x[1], values))))
 
@@ -381,6 +396,8 @@ def W_klient(): # done
 
         return n
 
+    W_klient = 1
+
     raw_values = []
     values = []
     N = 30
@@ -390,7 +407,7 @@ def W_klient(): # done
             'nazwa': repr(nazwa()),
             'branza': repr(random.choice(BRANZA)),
         })
-        values_line = "({nazwa}, {branza})"
+        values_line = "({id}, {nazwa}, {branza})"
         values.append(values_line.format(**raw_values[-1]))
 
     if inhibit_emission(values): return
@@ -413,7 +430,7 @@ def W_pracownik(): # done
             'wynagrodzenie': repr(random.choice(('niskie', 'srednie', 'wysokie',))),
             'szef_id': 1,  # nieistorne, bo nie pojawia się w pytaniach
         })
-        values_line = '({imie_nazwisko}, {pesel}, {doswiadczenie}, {wynagrodzenie}, {szef_id})'
+        values_line = '({id}, {imie_nazwisko}, {pesel}, {doswiadczenie}, {wynagrodzenie}, {szef_id})'
         values.append(values_line.format(**raw_values[-1]))
 
     if inhibit_emission(values): return
@@ -489,7 +506,7 @@ def W_projekt(lower_dates, upper_dates): # done
             'data_zakonczenia': data_zakonczenia[0],
         })
         values_line = (
-            "({nazwa}, {tempo_realizacji}, {liczba_pracownikow}, {czas_trwania}"
+            "({id}, {nazwa}, {tempo_realizacji}, {liczba_pracownikow}, {czas_trwania}"
             ", {data_rozpoczecia}, {data_zakonczenia}) -- {dt_b} - {dt_e}"
         )
         values.append(values_line.format(
@@ -506,7 +523,7 @@ def W_projekt(lower_dates, upper_dates): # done
 def W_smieci(): # done
     insert_statement = "INSERT INTO W_smieci values\n  {}\n;"
 
-    values = ["('tak')", "('nie')",]
+    values = ["(1, 'tak')", "(2, 'nie')",]
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
@@ -561,13 +578,14 @@ def W_technologia(): # done
         (Category.Game_engine, 'OpenMW', ''),
     ]
     values = [
-        '({typ}, {nazwa}, {wersja})'.format(
+        '({id}, {typ}, {nazwa}, {wersja})'.format(
+            id = (i + 1),
             typ = repr(each[0]),
             nazwa = repr(each[1]),
             wersja = repr(each[2]),
         )
-        for each
-        in values
+        for i, each
+        in enumerate(values)
     ]
 
     if inhibit_emission(values): return
