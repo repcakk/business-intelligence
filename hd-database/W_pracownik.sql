@@ -2,7 +2,7 @@
 (
 	[id] INT NOT NULL PRIMARY KEY, 
     [imie_nazwisko] NVARCHAR(100) NULL, 
-    [pesel] INT NULL, 
+    [pesel] NCHAR(11) NULL, 
     [doswiadczenie] NVARCHAR(100) NULL, 
     [wynagrodzenie] NVARCHAR(100) NULL, 
     [szef_id] INT NULL, 
