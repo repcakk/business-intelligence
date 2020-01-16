@@ -75,14 +75,18 @@ def F_pracownik_w_projekcie():
 
     return values
 
-def F_technologie_pracownika():
+def F_technologie_pracownika(pracownik_no, technologia_no):
     insert_statement = "INSERT INTO F_technologie_pracownika values\n  {}\n;"
 
     values = []
-    for i in range(10):
-        values_line = "()".format(
-        )
-        values.append(values_line)
+    for i in range(1, pracownik_no + 1):
+        techs = random.sample(range(1, technologia_no + 1), random.randint(2, 5))
+        for t in techs:
+            values_line = "({pracownik_id}, {technologia_id})".format(
+                pracownik_id = i,
+                technologia_id = t,
+            )
+            values.append(values_line)
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
@@ -458,14 +462,15 @@ def W_technologia(): # done
 # Main function
 
 def main():
-    F_pracownik_w_projekcie()
-    F_technologie_pracownika()
     lower_dates, upper_dates = W_data()
     W_klient()
-    W_pracownik()
+    pracownik = W_pracownik()
     W_projekt(lower_dates, upper_dates)
     W_smieci()
-    W_technologia()
+    technologia = W_technologia()
+
+    F_pracownik_w_projekcie()
+    F_technologie_pracownika(len(pracownik), len(technologia))
 
 
 if __name__ == "__main__":
