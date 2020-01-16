@@ -346,28 +346,72 @@ def W_projekt(lower_dates, upper_dates): # done
 
     return values
 
-def W_smieci():
+def W_smieci(): # done
     insert_statement = "INSERT INTO W_smieci values\n  {}\n;"
 
-    values = []
-    for i in range(10):
-        values_line = "()".format(
-        )
-        values.append(values_line)
+    values = ["('tak')", "('nie')",]
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
 
     return values
 
-def W_technologia():
+def W_technologia(): # done
     insert_statement = "INSERT INTO W_technologia values\n  {}\n;"
 
-    values = []
-    for i in range(10):
-        values_line = "()".format(
+    class Category:
+        Programming_language = 'programming language'
+        DSL = 'domain-specific language'
+        API = 'API'
+        Framework = 'framework'
+        Game_engine = 'game engine'
+
+    values = [
+        (Category.Programming_language, 'x86 assembly', '',),
+        (Category.Programming_language, 'amd64 assembly', ''),
+        (Category.Programming_language, 'C++98', ''),
+        (Category.Programming_language, 'C++11', ''),
+        (Category.Programming_language, 'C++14', ''),
+        (Category.Programming_language, 'C++17', ''),
+        (Category.Programming_language, 'C89', ''),
+        (Category.Programming_language, 'C11', ''),
+        (Category.Programming_language, 'Python 2', ''),
+        (Category.Programming_language, 'Python 3', '3.4'),
+        (Category.Programming_language, 'Python 3', '3.5'),
+        (Category.Programming_language, 'Python 3', '3.6'),
+        (Category.Programming_language, 'JavaScript', ''),
+        (Category.Programming_language, 'ECMAScript', ''),
+        (Category.Programming_language, 'Java', ''),
+        (Category.Programming_language, 'FORTRAN', ''),
+        (Category.Programming_language, 'COBOL', ''),
+        (Category.Programming_language, 'Ada', ''),
+        (Category.Programming_language, 'Turbo Pascal', ''),
+        (Category.Programming_language, 'OCaml', ''),
+        (Category.Programming_language, 'Erlang', ''),
+        (Category.Programming_language, 'Elixir', ''),
+        (Category.DSL, 'HTML 5', ''),
+        (Category.API, 'OpenGL', ''),
+        (Category.API, 'Vulkan', ''),
+        (Category.API, 'WebGL', ''),
+        (Category.Framework, 'Angular', '1.6'),
+        (Category.Framework, 'Angular', '2'),
+        (Category.Framework, 'Angular', '8'),
+        (Category.Framework, 'Ember', ''),
+        (Category.Framework, 'Backbone.js', ''),
+        (Category.Framework, 'Django', '1.7'),
+        (Category.Game_engine, 'Unity', ''),
+        (Category.Game_engine, 'Unreal', ''),
+        (Category.Game_engine, 'OpenMW', ''),
+    ]
+    values = [
+        '({typ}, {nazwa}, {wersja})'.format(
+            typ = repr(each[0]),
+            nazwa = repr(each[1]),
+            wersja = repr(each[2]),
         )
-        values.append(values_line)
+        for each
+        in values
+    ]
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
