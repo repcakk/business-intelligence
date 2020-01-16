@@ -64,28 +64,77 @@ def inhibit_emission(values):
 def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
     insert_statement = "INSERT INTO F_pracownik_w_projekcie values\n  {}\n;"
 
-    matched_projekts = []
+    all_projekts = set(map(lambda x: x['id'], projekt))
+    matched_projekts = set()
     projekts_for = {}
 
     values = []
     for each in pracownik:
-        pr = random.choice(projekt)
-        pr_begin = all_dates[pr['data_rozpoczecia']][2]
-        pr_end = all_dates[pr['data_zakonczenia']][2]
-        print(pr_begin, pr_end, pr)
+        prs = set()
+
+        for _ in range(random.randint(2, 6)):
+            pr = random.choice(projekt)
+            matched_projekts.add(pr['id'])
+            if pr['id'] in prs:
+                continue
+            prs.add(pr['id'])
+
+            pr_begin = all_dates[pr['data_rozpoczecia'] - 1][2]
+            pr_end = all_dates[pr['data_zakonczenia'] - 1][2]
+
+            valid_dates = list(filter(
+                lambda each: (each[2] >= pr_begin and each[2] <= pr_end),
+                all_dates,
+            ))
+            if len(valid_dates) < 2:
+                print(len(valid_dates))
+                print(pr, pr_begin, pr_end)
+                continue
+
+            pr_pr_begin = random.choice(valid_dates[: (len(valid_dates)//2)])
+            pr_pr_end = random.choice(valid_dates[(len(valid_dates)//2) :])
+            czas_trwania = (pr_pr_end[2] - pr_pr_begin[2]).days
+
+            values_line = (
+                "({czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
+                ", {klient_id}, {etap}, {data_rozpoczecia}, {data_zakonczenia}"
+                ", {tempo_pracy}, {uzyskany_dochod}"
+                ")"
+            ).format(
+                czas_trwania = czas_trwania,
+                pracownik_id = each['id'],
+                projekt_id = pr['id'],
+                smieci_id = 2,  # FIXME Niech nikt nie odchodzi. Zapewnienie spójności
+                                # między datami odejścia w różnych projektach byłoby
+                                # okrutnie czasochłonne.
+                klient_id = random.choice(klient)['id'],
+                etap = repr(random.choice(('projektowanie', 'prototyp', 'implementacja',))),
+                data_rozpoczecia = pr_pr_begin[0],
+                data_zakonczenia = pr_pr_end[0],
+                tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
+                uzyskany_dochod = random.randint(100_000, 10_000_000),
+            )
+            values.append(values_line)
+
+    for each in sorted(all_projekts - matched_projekts):
+        pr = list(filter(lambda x: x['id'] == each, projekt))[0]
+        each = random.choice(pracownik)
+
+        pr_begin = all_dates[pr['data_rozpoczecia'] - 1][2]
+        pr_end = all_dates[pr['data_zakonczenia'] - 1][2]
 
         valid_dates = list(filter(
             lambda each: (each[2] >= pr_begin and each[2] <= pr_end),
             all_dates,
         ))
-        print(len(valid_dates))
         if len(valid_dates) < 2:
+            print(len(valid_dates))
+            print(pr, pr_begin, pr_end)
             continue
 
         pr_pr_begin = random.choice(valid_dates[: (len(valid_dates)//2)])
         pr_pr_end = random.choice(valid_dates[(len(valid_dates)//2) :])
         czas_trwania = (pr_pr_end[2] - pr_pr_begin[2]).days
-        print(each, each['imie_nazwisko'], pr['nazwa'], czas_trwania)
 
         values_line = (
             "({czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
@@ -107,12 +156,6 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
             uzyskany_dochod = random.randint(100_000, 10_000_000),
         )
         values.append(values_line)
-
-    # values = []
-    # for i in range(10):
-    #     values_line = "()".format(
-    #     )
-    #     values.append(values_line)
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
@@ -185,7 +228,7 @@ def W_data(): # done
 
     lower_dates = []
     N = 20
-    for i in range(N):
+    for i in range(1, N + 1):
         y = random.randint(2014, 2017)
 
         p = random.randint(0, 3)
@@ -206,11 +249,12 @@ def W_data(): # done
             miesiac = repr(mp),
             dzien = d,
         )
-        lower_dates.append((i + 1, values_line, dt))
+        lower_dates.append((i, values_line, dt))
         raw_values.append(lower_dates[-1])
 
     upper_dates = []
-    for i in range(N // 2):
+    M = (N + 1 + (N // 2))
+    for i in range(N + 1, M):
         y = random.randint(2018, 2019)
 
         p = random.randint(0, 3)
@@ -231,7 +275,7 @@ def W_data(): # done
             miesiac = repr(mp),
             dzien = d,
         )
-        upper_dates.append((i + 1, values_line, dt))
+        upper_dates.append((i, values_line, dt))
         raw_values.append(upper_dates[-1])
 
     values = []
@@ -245,7 +289,7 @@ def W_data(): # done
     max_date = max(only_dates)
 
     days_apart = (max_date - min_date)
-    for i in range(1, days_apart.days + 1):
+    for i in range(M + 1, ((M + 1) + (days_apart.days + 1))):
         days_since = datetime.timedelta(days = i)
         dt = (min_date + days_since)
         if dt not in only_dates:
@@ -403,7 +447,7 @@ def W_projekt(lower_dates, upper_dates): # done
         'University',
         'Academia',
         'Industry',
-        'Minig',
+        'Mining',
         'Gaming',
         'Musical',
         'Men',
@@ -424,9 +468,14 @@ def W_projekt(lower_dates, upper_dates): # done
     values = []
     for i in range(1, 41):
         data_rozpoczecia = random.choice(lower_dates)
-        data_zakonczenia = random.choice(lower_dates + upper_dates)
-        while data_rozpoczecia[2] >= data_zakonczenia[2]:
-            data_zakonczenia = random.choice(lower_dates + upper_dates)
+        data_zakonczenia = random.choice(list(filter(
+            lambda each: each[2] > data_rozpoczecia[2],
+            lower_dates + upper_dates,
+        )))
+        if data_rozpoczecia[2] >= data_zakonczenia[2]:
+            print(data_rozpoczecia, data_zakonczenia)
+            print('FUCKUP')
+            exit(127)
 
         raw_values.append({
             'id': i,
@@ -437,8 +486,15 @@ def W_projekt(lower_dates, upper_dates): # done
             'data_rozpoczecia': data_rozpoczecia[0],
             'data_zakonczenia': data_zakonczenia[0],
         })
-        values_line = "({nazwa}, {tempo_realizacji}, {liczba_pracownikow}, {czas_trwania}, {data_rozpoczecia}, {data_zakonczenia})"
-        values.append(values_line.format(**raw_values[-1]))
+        values_line = (
+            "({nazwa}, {tempo_realizacji}, {liczba_pracownikow}, {czas_trwania}"
+            ", {data_rozpoczecia}, {data_zakonczenia}) -- {dt_b} - {dt_e}"
+        )
+        values.append(values_line.format(
+            dt_b = data_rozpoczecia[2],
+            dt_e = data_zakonczenia[2],
+            **raw_values[-1]
+        ))
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
