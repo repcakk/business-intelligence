@@ -73,6 +73,8 @@ def F_pracownik_w_projekcie():
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
 
+    return values
+
 def F_technologie_pracownika():
     insert_statement = "INSERT INTO F_technologie_pracownika values\n  {}\n;"
 
@@ -84,6 +86,8 @@ def F_technologie_pracownika():
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
+
+    return values
 
 def W_data():
     insert_statement = "INSERT INTO W_data values\n  {}\n;"
@@ -176,14 +180,73 @@ def W_data():
 def W_klient():
     insert_statement = "INSERT INTO W_klient values\n  {}\n;"
 
+    A = (
+        'Turbo',
+        'Super',
+        'Best',
+        None,
+        None,
+        None,
+    )
+    B = (
+        'Szym',
+        'Ziom',
+        'Mur',
+        'Pol',
+        'Beton',
+        'Cement',
+    )
+    C = (
+        'bud',
+        'ex',
+        'ix'
+    )
+    D = (
+        ', Inc.',
+        ' Sp. z. o.o.',
+        ' Sp.j. sp.k.',
+        ' Sp.j.',
+        ' S.A.',
+        None,
+        None,
+    )
+
+    BRANZA = (
+        'rozrywka',
+        'film',
+        'muzyka',
+        'budownictwo',
+        'rolnictwo',
+        'informatyka',
+        'sektor publiczny',
+    )
+
+    def nazwa():
+        a = random.choice(A)
+        b = random.choice(B)
+        c = random.choice(C)
+        d = random.choice(D)
+
+        n = '{}{}'.format(b, c)
+        if a is not None:
+            n = '{}-{}'.format(a, n)
+        if d is not None:
+            n = '{}{}'.format(n, d)
+
+        return n
+
     values = []
     for i in range(10):
-        values_line = "()".format(
+        values_line = "({nazwa}, {branza})".format(
+            nazwa = repr(nazwa()),
+            branza = repr(random.choice(BRANZA)),
         )
         values.append(values_line)
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
+
+    return values
 
 def W_pracownik():
     insert_statement = "INSERT INTO W_pracownik values\n  {}\n;"
@@ -201,6 +264,8 @@ def W_pracownik():
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
+
+    return values
 
 def W_projekt(lower_dates, upper_dates):
     insert_statement = "INSERT INTO W_projekt values\n  {}\n;"
@@ -248,6 +313,8 @@ def W_projekt(lower_dates, upper_dates):
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
 
+    return values
+
 def W_smieci():
     insert_statement = "INSERT INTO W_smieci values\n  {}\n;"
 
@@ -260,6 +327,8 @@ def W_smieci():
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
 
+    return values
+
 def W_technologia():
     insert_statement = "INSERT INTO W_technologia values\n  {}\n;"
 
@@ -271,6 +340,8 @@ def W_technologia():
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
+
+    return values
 
 
 
