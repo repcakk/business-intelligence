@@ -177,7 +177,7 @@ def W_data():
 
     return lower_dates, upper_dates
 
-def W_klient():
+def W_klient(): # done
     insert_statement = "INSERT INTO W_klient values\n  {}\n;"
 
     A = (
@@ -260,7 +260,7 @@ def W_klient():
 
     return values
 
-def W_pracownik():
+def W_pracownik(): # done
     insert_statement = "INSERT INTO W_pracownik values\n  {}\n;"
 
     values = []
@@ -279,7 +279,7 @@ def W_pracownik():
 
     return values
 
-def W_projekt(lower_dates, upper_dates):
+def W_projekt(lower_dates, upper_dates): # done
     insert_statement = "INSERT INTO W_projekt values\n  {}\n;"
 
     STARTUP_TEMPLATE = (
