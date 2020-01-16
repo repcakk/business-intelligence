@@ -89,7 +89,7 @@ def F_technologie_pracownika():
 
     return values
 
-def W_data():
+def W_data(): # done
     insert_statement = "INSERT INTO W_data values\n  {}\n;"
 
     PORA_ROKU = {
@@ -103,6 +103,20 @@ def W_data():
         1: { 6: 'czerwiec', 7: 'lipiec', 8: 'sierpień', }, # lato
         2: { 9: 'wrzesień', 10: 'październik', 11: 'listopad', }, # jesień
         3: { 12: 'grudzień', 1: 'styczeń', 2: 'luty', }, # zima
+    }
+    REV_MIESIACE_PORA_ROKU = {
+         1: 3,
+         2: 3,
+         3: 0,
+         4: 0,
+         5: 0,
+         6: 1,
+         7: 1,
+         8: 1,
+         9: 2,
+        10: 2,
+        11: 2,
+        12: 3,
     }
     DNI = {
          1: 31,
@@ -122,7 +136,7 @@ def W_data():
     lower_dates = []
     N = 20
     for i in range(N):
-        y = random.randint(2014, 2018)
+        y = random.randint(2014, 2017)
 
         p = random.randint(0, 3)
         pp = PORA_ROKU[p]
@@ -146,7 +160,7 @@ def W_data():
 
     upper_dates = []
     for i in range(N // 2):
-        y = random.randint(2019, 2020)
+        y = random.randint(2018, 2019)
 
         p = random.randint(0, 3)
         pp = PORA_ROKU[p]
@@ -173,6 +187,27 @@ def W_data():
     values.extend(upper_dates)
 
     if inhibit_emission(values): return
+
+    only_dates = set(map(lambda x: x[2], values))
+    min_date = min(only_dates)
+    max_date = max(only_dates)
+
+    days_apart = (max_date - min_date)
+    for i in range(1, days_apart.days + 1):
+        days_since = datetime.timedelta(days = i)
+        dt = (min_date + days_since)
+        if dt not in only_dates:
+            p = REV_MIESIACE_PORA_ROKU[dt.month]
+            pp = PORA_ROKU[p]
+            mp = MIESIACE[p][dt.month]
+            values_line = "({rok}, {pora_roku}, {miesiac}, {dzien})".format(
+                rok = dt.year,
+                pora_roku = repr(pp),
+                miesiac = repr(mp),
+                dzien = dt.day,
+            )
+            values.append((i + 1, values_line, dt))
+
     print(insert_statement.format("\n, ".join(map(lambda x: x[1], values))))
 
     return lower_dates, upper_dates
