@@ -62,6 +62,12 @@ def pesel():
 def inhibit_emission(values):
     return values[0] == "()"
 
+def emit_split_by_1000_rows(statement, values):
+    i = 0
+    while (i * 1000) < len(values):
+        sub = values[i * 1000 : ((i + 1) * 1000) - 1]
+        print(statement.format("\n    , ".join(sub)))
+        i += 1
 
 def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
     insert_statement = "INSERT INTO F_pracownik_w_projekcie values\n  {}\n;"
@@ -195,7 +201,7 @@ def F_technologie_pracownika(pracownik_no, technologia_no):
     return values
 
 def W_data(): # done
-    insert_statement = "INSERT INTO W_data values\n  {}\n;"
+    insert_statement = "INSERT INTO W_data values\n      {}\n;"
 
     PORA_ROKU = {
         0: 'wiosna',
@@ -322,7 +328,10 @@ def W_data(): # done
             values.append((i, values_line, dt))
             raw_values.append((i, values_line, dt))
 
-    print(insert_statement.format("\n, ".join(map(lambda x: x[1], values))))
+    emit_split_by_1000_rows(
+        insert_statement,
+        list(map(lambda each: each[1], values))
+    )
 
     return lower_dates, upper_dates, raw_values
 
