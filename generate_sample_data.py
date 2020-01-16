@@ -61,14 +61,58 @@ def inhibit_emission(values):
     return values[0] == "()"
 
 
-def F_pracownik_w_projekcie():
+def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
     insert_statement = "INSERT INTO F_pracownik_w_projekcie values\n  {}\n;"
 
+    matched_projekts = []
+    projekts_for = {}
+
     values = []
-    for i in range(10):
-        values_line = "()".format(
+    for each in pracownik:
+        pr = random.choice(projekt)
+        pr_begin = all_dates[pr['data_rozpoczecia']][2]
+        pr_end = all_dates[pr['data_zakonczenia']][2]
+        print(pr_begin, pr_end, pr)
+
+        valid_dates = list(filter(
+            lambda each: (each[2] >= pr_begin and each[2] <= pr_end),
+            all_dates,
+        ))
+        print(len(valid_dates))
+        if len(valid_dates) < 2:
+            continue
+
+        pr_pr_begin = random.choice(valid_dates[: (len(valid_dates)//2)])
+        pr_pr_end = random.choice(valid_dates[(len(valid_dates)//2) :])
+        czas_trwania = (pr_pr_end[2] - pr_pr_begin[2]).days
+        print(each, each['imie_nazwisko'], pr['nazwa'], czas_trwania)
+
+        values_line = (
+            "({czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
+            ", {klient_id}, {etap}, {data_rozpoczecia}, {data_zakonczenia}"
+            ", {tempo_pracy}, {uzyskany_dochod}"
+            ")"
+        ).format(
+            czas_trwania = czas_trwania,
+            pracownik_id = each['id'],
+            projekt_id = pr['id'],
+            smieci_id = 2,  # FIXME Niech nikt nie odchodzi. Zapewnienie spójności
+                            # między datami odejścia w różnych projektach byłoby
+                            # okrutnie czasochłonne.
+            klient_id = random.choice(klient)['id'],
+            etap = repr(random.choice(('projektowanie', 'prototyp', 'implementacja',))),
+            data_rozpoczecia = pr_pr_begin[0],
+            data_zakonczenia = pr_pr_end[0],
+            tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
+            uzyskany_dochod = random.randint(100_000, 10_000_000),
         )
         values.append(values_line)
+
+    # values = []
+    # for i in range(10):
+    #     values_line = "()".format(
+    #     )
+    #     values.append(values_line)
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
@@ -137,6 +181,8 @@ def W_data(): # done
         12: 31,
     }
 
+    raw_values = []
+
     lower_dates = []
     N = 20
     for i in range(N):
@@ -161,6 +207,7 @@ def W_data(): # done
             dzien = d,
         )
         lower_dates.append((i + 1, values_line, dt))
+        raw_values.append(lower_dates[-1])
 
     upper_dates = []
     for i in range(N // 2):
@@ -185,6 +232,7 @@ def W_data(): # done
             dzien = d,
         )
         upper_dates.append((i + 1, values_line, dt))
+        raw_values.append(upper_dates[-1])
 
     values = []
     values.extend(lower_dates)
@@ -211,10 +259,11 @@ def W_data(): # done
                 dzien = dt.day,
             )
             values.append((i + 1, values_line, dt))
+            raw_values.append((i + 1, values_line, dt))
 
     print(insert_statement.format("\n, ".join(map(lambda x: x[1], values))))
 
-    return lower_dates, upper_dates
+    return lower_dates, upper_dates, raw_values
 
 def W_klient(): # done
     insert_statement = "INSERT INTO W_klient values\n  {}\n;"
@@ -286,37 +335,45 @@ def W_klient(): # done
 
         return n
 
+    raw_values = []
     values = []
-    for i in range(30):
-        values_line = "({nazwa}, {branza})".format(
-            nazwa = repr(nazwa()),
-            branza = repr(random.choice(BRANZA)),
-        )
-        values.append(values_line)
+    N = 30
+    for i in range(1, N + 1):
+        raw_values.append({
+            'id': i,
+            'nazwa': repr(nazwa()),
+            'branza': repr(random.choice(BRANZA)),
+        })
+        values_line = "({nazwa}, {branza})"
+        values.append(values_line.format(**raw_values[-1]))
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
 
-    return values
+    return raw_values
 
 def W_pracownik(): # done
     insert_statement = "INSERT INTO W_pracownik values\n  {}\n;"
 
+    raw_values = []
     values = []
-    for i in range(10):
-        values_line = '({imie_nazwisko}, {pesel}, {doswiadczenie}, {wynagrodzenie}, {szef_id})'.format(
-            imie_nazwisko = repr(imie_nazwisko()),
-            pesel = pesel(),
-            doswiadczenie = repr(random.choice(('junior', 'regular', 'senior',))),
-            wynagrodzenie = repr(random.choice(('niskie', 'srednie', 'wysokie',))),
-            szef_id = 1,  # nieistorne, bo nie pojawia się w pytaniach
-        )
-        values.append(values_line)
+    N = 10
+    for i in range(1, N + 1):
+        raw_values.append({
+            'id': i,
+            'imie_nazwisko': repr(imie_nazwisko()),
+            'pesel': pesel(),
+            'doswiadczenie': repr(random.choice(('junior', 'regular', 'senior',))),
+            'wynagrodzenie': repr(random.choice(('niskie', 'srednie', 'wysokie',))),
+            'szef_id': 1,  # nieistorne, bo nie pojawia się w pytaniach
+        })
+        values_line = '({imie_nazwisko}, {pesel}, {doswiadczenie}, {wynagrodzenie}, {szef_id})'
+        values.append(values_line.format(**raw_values[-1]))
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
 
-    return values
+    return raw_values
 
 def W_projekt(lower_dates, upper_dates): # done
     insert_statement = "INSERT INTO W_projekt values\n  {}\n;"
@@ -363,27 +420,30 @@ def W_projekt(lower_dates, upper_dates): # done
     def nazwa():
         return random.choice(STARTUP_TEMPLATE).format(random.choice(WHAT_FOR))
 
+    raw_values = []
     values = []
-    for i in range(40):
+    for i in range(1, 41):
         data_rozpoczecia = random.choice(lower_dates)
         data_zakonczenia = random.choice(lower_dates + upper_dates)
         while data_rozpoczecia[2] >= data_zakonczenia[2]:
             data_zakonczenia = random.choice(lower_dates + upper_dates)
 
-        values_line = "({nazwa}, {tempo_realizacji}, {liczba_pracownikow}, {czas_trwania}, {data_rozpoczecia}, {data_zakonczenia})".format(
-            nazwa = repr(nazwa()),
-            tempo_realizacji = repr(random.choice(('przed czasem', 'o czasie', 'po czasie',))),
-            liczba_pracownikow = repr(random.choice(('mała', 'średnia', 'duża',))),
-            czas_trwania = (data_zakonczenia[2] - data_rozpoczecia[2]).days,
-            data_rozpoczecia = data_rozpoczecia[0],
-            data_zakonczenia = data_zakonczenia[0],
-        )
-        values.append(values_line)
+        raw_values.append({
+            'id': i,
+            'nazwa': repr(nazwa()),
+            'tempo_realizacji': repr(random.choice(('przed czasem', 'o czasie', 'po czasie',))),
+            'liczba_pracownikow': repr(random.choice(('mała', 'średnia', 'duża',))),
+            'czas_trwania': (data_zakonczenia[2] - data_rozpoczecia[2]).days,
+            'data_rozpoczecia': data_rozpoczecia[0],
+            'data_zakonczenia': data_zakonczenia[0],
+        })
+        values_line = "({nazwa}, {tempo_realizacji}, {liczba_pracownikow}, {czas_trwania}, {data_rozpoczecia}, {data_zakonczenia})"
+        values.append(values_line.format(**raw_values[-1]))
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
 
-    return values
+    return raw_values
 
 def W_smieci(): # done
     insert_statement = "INSERT INTO W_smieci values\n  {}\n;"
@@ -462,15 +522,15 @@ def W_technologia(): # done
 # Main function
 
 def main():
-    lower_dates, upper_dates = W_data()
-    W_klient()
+    lower_dates, upper_dates, raw_dates = W_data()
+    klient = W_klient()
     pracownik = W_pracownik()
-    W_projekt(lower_dates, upper_dates)
+    projekt = W_projekt(lower_dates, upper_dates)
     W_smieci()
     technologia = W_technologia()
 
-    F_pracownik_w_projekcie()
     F_technologie_pracownika(len(pracownik), len(technologia))
+    F_pracownik_w_projekcie(pracownik, projekt, klient, raw_dates)
 
 
 if __name__ == "__main__":
