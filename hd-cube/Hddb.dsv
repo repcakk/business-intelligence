@@ -1,0 +1,347 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="75504713-5735-48b8-9fbb-5049a843f429" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Hddb</ID>
+  <Name>Hddb</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Hddb</DataSourceID>
+  <Schema>
+    <xs:schema id="Hddb" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Hddb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="f4322fae-78b4-4420-8580-23c2435cb8ca">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_F_pracownik_w_projekcie" msprop:design-time-name="b46524ed-d444-466a-b870-69c97bbe5d14" msprop:DbTableName="F_pracownik_w_projekcie" msprop:FriendlyName="F_pracownik_w_projekcie" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Id" msprop:design-time-name="db3247e0-2625-4bbe-8db3-79822e4bb7f9" msprop:DbColumnName="Id" msprop:FriendlyName="Id" type="xs:int" />
+                  <xs:element name="czas_trwania" msprop:design-time-name="6ff3ce20-c872-4ebd-a5b7-78d723a77f44" msprop:DbColumnName="czas_trwania" msprop:FriendlyName="czas_trwania" type="xs:int" minOccurs="0" />
+                  <xs:element name="pracownik_id" msprop:design-time-name="a8151ea9-06fd-4a9b-a102-e20b03878df6" msprop:DbColumnName="pracownik_id" msprop:FriendlyName="pracownik_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="projekt_id" msprop:design-time-name="452cef98-4687-4042-a6b3-616fe0d2057b" msprop:DbColumnName="projekt_id" msprop:FriendlyName="projekt_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="czy_odszedl_smieci_id" msprop:design-time-name="c819f7b5-9169-4bc7-87c3-630629e83313" msprop:DbColumnName="czy_odszedl_smieci_id" msprop:FriendlyName="czy_odszedl_smieci_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="klient_id" msprop:design-time-name="07a9bdfe-ec58-4906-acd9-9e03a3d426d0" msprop:DbColumnName="klient_id" msprop:FriendlyName="klient_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="etap_smieci_id" msprop:design-time-name="5e77e437-19ae-4e7f-bb30-e5361d9caabe" msprop:DbColumnName="etap_smieci_id" msprop:FriendlyName="etap_smieci_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="data_rozpoczecia" msprop:design-time-name="3e665f3b-3e7b-4cb6-abf1-19441037d249" msprop:DbColumnName="data_rozpoczecia" msprop:FriendlyName="data_rozpoczecia" type="xs:int" minOccurs="0" />
+                  <xs:element name="data_zakonczenia" msprop:design-time-name="1ca265f3-7ce0-4ec4-b45e-fc2d395ceb0d" msprop:DbColumnName="data_zakonczenia" msprop:FriendlyName="data_zakonczenia" type="xs:int" minOccurs="0" />
+                  <xs:element name="tempo_pracy_smieci_id" msprop:design-time-name="09191437-8538-44ce-9969-8229aaca4134" msprop:DbColumnName="tempo_pracy_smieci_id" msprop:FriendlyName="tempo_pracy_smieci_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="uzyskany_dochod" msprop:design-time-name="3b0773e0-b09b-4f72-b12a-4da387150530" msprop:DbColumnName="uzyskany_dochod" msprop:FriendlyName="uzyskany_dochod" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_F_technologie_pracownika" msprop:design-time-name="16d51c21-2f2a-4046-82ce-f2d579e4de39" msprop:DbTableName="F_technologie_pracownika" msprop:FriendlyName="F_technologie_pracownika" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="c6810619-541d-4912-bbc5-6c657e68db9d" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="pracownik_id" msprop:design-time-name="212d641f-e512-472a-8f0c-bf7896afda28" msprop:DbColumnName="pracownik_id" msprop:FriendlyName="pracownik_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="technologia_id" msprop:design-time-name="27ce4ae9-72c2-4edd-b58d-1401fc75a106" msprop:DbColumnName="technologia_id" msprop:FriendlyName="technologia_id" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_W_data" msprop:design-time-name="aaf39f36-562e-4004-b226-87b3637ac63b" msprop:DbTableName="W_data" msprop:FriendlyName="W_data" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="5a323fcf-154f-4600-afd2-887564e3e3f7" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="rok" msprop:design-time-name="607ea6c6-645a-4224-b667-588fa5a43d62" msprop:DbColumnName="rok" msprop:FriendlyName="rok" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="pora_roku" msprop:design-time-name="a36fdd83-4181-4db1-b152-10d7cdf29840" msprop:DbColumnName="pora_roku" msprop:FriendlyName="pora_roku" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="miesiac" msprop:design-time-name="c82d758e-ef54-44dd-a90e-ff01d942a0b6" msprop:DbColumnName="miesiac" msprop:FriendlyName="miesiac" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="dzien" msprop:design-time-name="91416bb4-2c10-4441-8c2a-e70f64f0483e" msprop:DbColumnName="dzien" msprop:FriendlyName="dzien" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_W_klient" msprop:design-time-name="ee79cee6-431c-46a7-84b9-cab9e9147755" msprop:DbTableName="W_klient" msprop:FriendlyName="W_klient" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="139097fc-630a-434b-86fe-763b8715c8d1" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="nazwa" msprop:design-time-name="ecce67dd-df72-4d19-818a-3b666f6155b1" msprop:DbColumnName="nazwa" msprop:FriendlyName="nazwa" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="branza" msprop:design-time-name="e6c4ccd3-2dc4-41d1-9822-736bfd8e083e" msprop:DbColumnName="branza" msprop:FriendlyName="branza" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_W_pracownik" msprop:design-time-name="8f885021-8317-424b-8c3e-f3544bacc8ba" msprop:DbTableName="W_pracownik" msprop:FriendlyName="W_pracownik" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="d43864fc-02e0-47f2-8c88-7070b7694df8" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="imie_nazwisko" msprop:design-time-name="18c49de0-7e51-4988-a80a-e154eb7d1516" msprop:DbColumnName="imie_nazwisko" msprop:FriendlyName="imie_nazwisko" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="pesel" msprop:design-time-name="0f159649-3ea1-4216-a261-d796bea74b74" msprop:DbColumnName="pesel" msprop:FriendlyName="pesel" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="11" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="doswiadczenie" msprop:design-time-name="65245782-1002-4362-9969-19ad6bdadf1d" msprop:DbColumnName="doswiadczenie" msprop:FriendlyName="doswiadczenie" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="wynagrodzenie" msprop:design-time-name="8fa7eb80-e3df-44e3-94ce-f601b91ca379" msprop:DbColumnName="wynagrodzenie" msprop:FriendlyName="wynagrodzenie" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="szef_id" msprop:design-time-name="5d11a3ce-5b57-43f1-be7a-a8852c1316f5" msprop:DbColumnName="szef_id" msprop:FriendlyName="szef_id" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_W_projekt" msprop:design-time-name="4a6f1f38-4f5e-4e53-a328-b36c08ff0222" msprop:DbTableName="W_projekt" msprop:FriendlyName="W_projekt" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="bab1b113-a875-46d2-98c0-150779b906a4" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="nazwa" msprop:design-time-name="f6ac9b9d-de3e-43d8-8ba9-3984a237ba69" msprop:DbColumnName="nazwa" msprop:FriendlyName="nazwa" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tempo_realizacji_smieci_id" msprop:design-time-name="62b9ca0b-13e4-4b9a-bb15-aca18dbebe4c" msprop:DbColumnName="tempo_realizacji_smieci_id" msprop:FriendlyName="tempo_realizacji_smieci_id" type="xs:int" minOccurs="0" />
+                  <xs:element name="liczba_pracownikow" msprop:design-time-name="5ef205b5-4b87-4997-8858-3d8486ff357f" msprop:DbColumnName="liczba_pracownikow" msprop:FriendlyName="liczba_pracownikow" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="czas_trwania" msprop:design-time-name="d29cd8cc-2e00-482d-84c4-785ece28fed6" msprop:DbColumnName="czas_trwania" msprop:FriendlyName="czas_trwania" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="data_rozpoczecia" msprop:design-time-name="9bd374e2-093f-4ea2-9fa0-9a3757f8ccfb" msprop:DbColumnName="data_rozpoczecia" msprop:FriendlyName="data_rozpoczecia" type="xs:int" minOccurs="0" />
+                  <xs:element name="data_zakonczenia" msprop:design-time-name="42d107c4-d962-4f63-8eba-0d03ba4087c1" msprop:DbColumnName="data_zakonczenia" msprop:FriendlyName="data_zakonczenia" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_W_smieci" msprop:design-time-name="5f26fd40-174e-402d-8c75-44e461b1e8f4" msprop:DbTableName="W_smieci" msprop:FriendlyName="W_smieci" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="b53dc699-ed39-49fa-8b13-e1b1db2f707d" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="czy_odszedl" msprop:design-time-name="78123401-2750-4f27-a1e4-8067031cbf57" msprop:DbColumnName="czy_odszedl" msprop:FriendlyName="czy_odszedl" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="tempo_pracy" msprop:design-time-name="0c49630c-b354-456f-99b0-845a9380d52a" msprop:DbColumnName="tempo_pracy" msprop:FriendlyName="tempo_pracy" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="etap" msprop:design-time-name="426cd2b7-0999-4f7b-9284-c19a15e53717" msprop:DbColumnName="etap" msprop:FriendlyName="etap" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_W_technologia" msprop:design-time-name="2a195f9c-ef93-458d-87ce-e0fbbfbec720" msprop:DbTableName="W_technologia" msprop:FriendlyName="W_technologia" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msprop:design-time-name="961e5f26-5d14-47d1-a965-f64e4372b9e3" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="typ" msprop:design-time-name="07d1fc55-e2fb-463b-bae9-cd1cf88c09b5" msprop:DbColumnName="typ" msprop:FriendlyName="typ" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="nazwa" msprop:design-time-name="89b7fe04-13cc-4f58-876d-f5f9ec6f37b9" msprop:DbColumnName="nazwa" msprop:FriendlyName="nazwa" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="wersja" msprop:design-time-name="62cf1520-be0e-4e58-9dab-4bf1a60dae41" msprop:DbColumnName="wersja" msprop:FriendlyName="wersja" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="Id" />
+        </xs:unique>
+        <xs:unique name="dbo_F_technologie_pracownika_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_F_technologie_pracownika" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_W_data_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_W_data" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_W_klient_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_W_klient" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_W_pracownik_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_W_pracownik" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_W_projekt_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_W_projekt" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_W_smieci_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_W_smieci" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_W_technologia_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_W_technologia" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:keyref name="FK_W_projekt_w_projekcie_W_data_zakonczenie" refer="dbo_W_data_Constraint1">
+          <xs:selector xpath=".//dbo_W_projekt" />
+          <xs:field xpath="data_zakonczenia" />
+        </xs:keyref>
+        <xs:keyref name="FK_W_projekt_W_data_rozpoczecie" refer="dbo_W_data_Constraint1">
+          <xs:selector xpath=".//dbo_W_projekt" />
+          <xs:field xpath="data_rozpoczecia" />
+        </xs:keyref>
+        <xs:keyref name="FK_W_projekt_W_smieci_tempo" refer="dbo_W_smieci_Constraint1">
+          <xs:selector xpath=".//dbo_W_projekt" />
+          <xs:field xpath="tempo_realizacji_smieci_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_W_pracownik_W_pracownik" refer="dbo_W_pracownik_Constraint1">
+          <xs:selector xpath=".//dbo_W_pracownik" />
+          <xs:field xpath="szef_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_technologie_pracownika_W_technologia" refer="dbo_W_technologia_Constraint1">
+          <xs:selector xpath=".//dbo_F_technologie_pracownika" />
+          <xs:field xpath="technologia_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_technologie_pracownika_W_pracownik" refer="dbo_W_pracownik_Constraint1">
+          <xs:selector xpath=".//dbo_F_technologie_pracownika" />
+          <xs:field xpath="pracownik_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_pracownik_w_projekcie_W_smieci_etap" refer="dbo_W_smieci_Constraint1">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="etap_smieci_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_pracownik_w_projekcie_W_klient" refer="dbo_W_klient_Constraint1">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="klient_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_pracownik_w_projekcie_W_projekt" refer="dbo_W_projekt_Constraint1">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="projekt_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_pracownik_w_projekcie_W_data_zakonczenie" refer="dbo_W_data_Constraint1">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="data_zakonczenia" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_pracownik_w_projekcie_W_smieci_tempo" refer="dbo_W_smieci_Constraint1">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="tempo_pracy_smieci_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_pracownik_w_projekcie_W_data_rozpoczecie" refer="dbo_W_data_Constraint1">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="data_rozpoczecia" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_pracownik_w_projekcie_W_smieci_czy_odszedl" refer="dbo_W_smieci_Constraint1">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="czy_odszedl_smieci_id" />
+        </xs:keyref>
+        <xs:keyref name="FK_F_pracownik_w_projekcie_W_pracownik" refer="dbo_W_pracownik_Constraint1">
+          <xs:selector xpath=".//dbo_F_pracownik_w_projekcie" />
+          <xs:field xpath="pracownik_id" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Hddb xmlns="" />
+  </Schema>
+</DataSourceView>

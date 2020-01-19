@@ -1,0 +1,1005 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ed59e753-78ed-42ae-8251-6ad254519f72" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Hddb</ID>
+  <Name>Hddb</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="46" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="1006" scrolltop="-1744" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="87" x="48816" y="20135" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="W_technologia" left="12180" top="17069" logicalid="23" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_W_technologia" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="W_smieci" left="12318" top="635" logicalid="24" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_W_smieci" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="W_projekt" left="5420" top="0" logicalid="25" controlid="3" masterid="0" hint1="0" hint2="0" width="4498" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000921100009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_W_projekt" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="W_pracownik" left="17233" top="6313" logicalid="26" controlid="4" masterid="0" hint1="0" hint2="0" width="3096" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000180c0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_W_pracownik" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="F_pracownik_w_projekcie" left="5605" top="10594" logicalid="27" controlid="5" masterid="0" hint1="0" hint2="0" width="4128" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00002010000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_F_pracownik_w_projekcie" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="W_data" left="20" top="423" logicalid="28" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_W_data" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="W_klient" left="6169" top="17994" logicalid="29" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_W_klient" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="F_technologie_pracownika" left="17268" top="12823" logicalid="30" controlid="8" masterid="0" hint1="0" hint2="0" width="3043" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000e30b0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_F_technologie_pracownika" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14880" top="14224" logicalid="31" controlid="9" masterid="0" hint1="0" hint2="0" width="2688" height="3507" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_technologie_pracownika_W_technologia]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="8" sourceattachpoint="11" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="15180" y="17331" />
+              <point x="16574" y="17331" />
+              <point x="16574" y="14524" />
+              <point x="17268" y="14524" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7919" top="2861" logicalid="32" controlid="10" masterid="0" hint1="0" hint2="0" width="5749" height="8033" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_pracownik_w_projekcie_W_smieci_czy_odszedl]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="3" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13268" y="3360" />
+              <point x="13268" y="6977" />
+              <point x="8219" y="6977" />
+              <point x="8219" y="10594" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8469" top="2861" logicalid="33" controlid="11" masterid="0" hint1="0" hint2="0" width="5749" height="8033" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_pracownik_w_projekcie_W_smieci_tempo]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="5" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13818" y="3360" />
+              <point x="13818" y="6977" />
+              <point x="8769" y="6977" />
+              <point x="8769" y="10594" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7919" top="2861" logicalid="34" controlid="12" masterid="0" hint1="0" hint2="0" width="6849" height="8033" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_pracownik_w_projekcie_W_smieci_etap]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="7" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14368" y="3360" />
+              <point x="14368" y="6977" />
+              <point x="8219" y="6977" />
+              <point x="8219" y="10594" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9618" top="1598" logicalid="35" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_W_projekt_W_smieci_tempo]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="14" destattachpoint="21" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12318" y="1997" />
+              <point x="9918" y="1997" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2720" top="1598" logicalid="36" controlid="14" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_W_projekt_W_data_rozpoczecie]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="15" destattachpoint="20" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3020" y="1997" />
+              <point x="5420" y="1997" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2720" top="2148" logicalid="37" controlid="15" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_W_projekt_w_projekcie_W_data_zakonczenie]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="17" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3020" y="2547" />
+              <point x="5420" y="2547" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7270" top="3496" logicalid="38" controlid="16" masterid="0" hint1="0" hint2="0" width="799" height="7398" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_pracownik_w_projekcie_W_projekt]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7669" y="3995" />
+              <point x="7669" y="10594" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15933" top="5013" logicalid="39" controlid="17" masterid="0" hint1="0" hint2="0" width="2598" height="2386" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_W_pracownik_W_pracownik]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="4" sourceattachpoint="12" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17233" y="6999" />
+              <point x="16233" y="6999" />
+              <point x="16233" y="5313" />
+              <point x="18231" y="5313" />
+              <point x="18231" y="6313" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9433" top="9350" logicalid="40" controlid="18" masterid="0" hint1="0" hint2="0" width="8100" height="4044" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_pracownik_w_projekcie_W_pracownik]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="5" sourceattachpoint="22" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17233" y="9749" />
+              <point x="10933" y="9749" />
+              <point x="10933" y="13094" />
+              <point x="9733" y="13094" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="17832" top="9386" logicalid="41" controlid="19" masterid="0" hint1="0" hint2="0" width="799" height="3737" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_technologie_pracownika_W_pracownik]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="8" sourceattachpoint="3" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18231" y="9885" />
+              <point x="18231" y="11369" />
+              <point x="18239" y="11369" />
+              <point x="18239" y="12823" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21" top="3073" logicalid="42" controlid="20" masterid="0" hint1="0" hint2="0" width="7398" height="7821" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_pracownik_w_projekcie_W_data_rozpoczecie]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="1" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="420" y="3572" />
+              <point x="420" y="7083" />
+              <point x="7119" y="7083" />
+              <point x="7119" y="10594" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1671" top="3073" logicalid="43" controlid="21" masterid="0" hint1="0" hint2="0" width="5198" height="7821" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_pracownik_w_projekcie_W_data_zakonczenie]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="7" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2070" y="3572" />
+              <point x="2070" y="7083" />
+              <point x="6569" y="7083" />
+              <point x="6569" y="10594" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7270" top="15294" logicalid="44" controlid="22" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_F_pracownik_w_projekcie_W_klient]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="5" sourceattachpoint="4" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7669" y="17994" />
+              <point x="7669" y="15594" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>1006</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1744</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>87</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="d9e223f2-b9e1-4a3c-a3a2-8cd4369d1f68">
+      <ID>Czy Odszedl Smieci</ID>
+      <Name>Czy Odszedl Smieci</Name>
+      <DimensionID>W Smieci</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5ccb3e59-5fa9-4b59-99f1-b3a77c9022a1">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="344a5768-7521-494f-a240-9dfdc372c516">
+          <AttributeID>Czy Odszedl</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ebc1e41c-3204-4ef4-81ec-f1b52399aeff">
+          <AttributeID>Tempo Pracy</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1fab3e2-4a70-449d-9084-762bc07dde36">
+          <AttributeID>Etap</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="0e79aaee-6985-4636-83ea-505bb46844c1">
+      <ID>Data Rozpoczecia</ID>
+      <Name>Data Rozpoczecia</Name>
+      <DimensionID>W Data</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="93477358-637b-4b2b-b444-215c2bf7973f">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0b95a972-832f-4374-a28c-45779e93bc21">
+          <AttributeID>Rok</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="17d68a3f-9615-41c0-92dc-bfdc9717706a">
+          <AttributeID>Pora Roku</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30650aed-8372-47b6-a6a2-28140e442602">
+          <AttributeID>Miesiac</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7b9384ba-9a87-4145-a84e-6213f7d2e6bc">
+          <AttributeID>Dzien</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="38f6da6b-aaff-40ac-a744-24c035ff13cb">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="333a9a55-2138-4251-a630-efcf4e52b839">
+      <ID>Tempo Pracy Smieci</ID>
+      <Name>Tempo Pracy Smieci</Name>
+      <DimensionID>W Smieci</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="59043ff5-de2e-4e39-bb7f-4171072bdec9">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8bd9a670-1b57-4ff7-8e17-9ffa278912ca">
+          <AttributeID>Czy Odszedl</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d33e79ea-55ea-48d7-b57c-9318a0c6849f">
+          <AttributeID>Tempo Pracy</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dfc079d6-86bc-4ea1-a2a4-16045274b869">
+          <AttributeID>Etap</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c3493b97-50c0-483b-a314-34ee74c16856">
+      <ID>Data Zakonczenia</ID>
+      <Name>Data Zakonczenia</Name>
+      <DimensionID>W Data</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="257b9911-a965-4931-8ae6-967f74854de3">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2038e37-6a77-4336-9759-6a79276f41b8">
+          <AttributeID>Rok</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cb3b6b0d-9331-4933-b376-77f98b3a2b40">
+          <AttributeID>Pora Roku</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="359bbcdf-1310-4986-a38d-31cafe338e7e">
+          <AttributeID>Miesiac</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b3cb3fb6-3351-45be-b5ec-5690d352e84c">
+          <AttributeID>Dzien</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="d53005bb-0f30-40bf-a2d8-285fabbc81a4">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="8dbecc21-18c4-464a-9c1a-4adc1e3ad875">
+      <ID>Etap Smieci</ID>
+      <Name>Etap Smieci</Name>
+      <DimensionID>W Smieci</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b22b1e14-d803-465c-a5d7-8460ae8d157b">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5b00be2-9b2f-4475-bb43-a7551b2c597a">
+          <AttributeID>Czy Odszedl</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dedebc0d-125b-4d22-baf2-bdbfa5229c3f">
+          <AttributeID>Tempo Pracy</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9e0a4735-886c-4cf2-b1fe-f92781ef40ad">
+          <AttributeID>Etap</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7556995d-8874-4839-a762-673fa60c210d">
+      <ID>Projekt - Tempo Realizacji Smieci</ID>
+      <Name>Projekt - Tempo Realizacji Smieci</Name>
+      <DimensionID>W Smieci</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0d463250-951e-4f45-84a0-395a01d5e857">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15c70ad8-8256-4915-95ef-be7536b38aef">
+          <AttributeID>Czy Odszedl</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="83d47520-b03b-479a-bcfd-08742ff1c853">
+          <AttributeID>Tempo Pracy</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fb19f64f-b6a8-401c-993c-0f64a1524485">
+          <AttributeID>Etap</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="957ea97e-9f33-4442-8efc-d7d4b0e59b60">
+      <ID>Projekt - Data Rozpoczecia</ID>
+      <Name>Projekt - Data Rozpoczecia</Name>
+      <DimensionID>W Data</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0221bd6c-fb2b-47d0-a52a-be5672e769ae">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5823430d-25ef-4ed0-8ad2-1f1ddd46ff72">
+          <AttributeID>Rok</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cf7e0e3b-2772-4fa1-a5d0-87302f90f169">
+          <AttributeID>Pora Roku</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="13c2830d-fbaa-45f5-b040-51b98d045f56">
+          <AttributeID>Miesiac</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="694a6182-ef21-4b36-b274-28a21415b322">
+          <AttributeID>Dzien</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="35a78226-f7cc-4086-abeb-4e3d8c04dd18">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="beec6188-4d78-4e9b-94a4-7622e9fd2230">
+      <ID>Projekt - Data Zakonczenia</ID>
+      <Name>Projekt - Data Zakonczenia</Name>
+      <DimensionID>W Data</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9c157eaf-c390-4e29-b057-2e0039bcb505">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f2b53c1-a3f7-4ce4-aeb3-fb49e3aca3d2">
+          <AttributeID>Rok</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b3c1619e-6b51-4ae0-b6a8-0d3d823efec3">
+          <AttributeID>Pora Roku</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d8e6bb8-244e-45d7-b21b-bb15646b5d89">
+          <AttributeID>Miesiac</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="643115c4-d661-4d67-9204-7e594db25d0f">
+          <AttributeID>Dzien</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="99bca761-e96f-4ab6-ba10-a8a002e4d597">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="0fc2b3d5-7e9d-403b-925d-c2a228d1ddf7">
+      <ID>W Pracownik</ID>
+      <Name>W Pracownik</Name>
+      <DimensionID>W Pracownik</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="39dfc4d2-2fe6-4b37-a5b6-4f385f18ec75">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45bd8bf6-4640-4683-b8b3-1f7a9902c1ca">
+          <AttributeID>Szef Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7356859f-9b81-4f26-a406-52cbef728205">
+          <AttributeID>Imie Nazwisko</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="afa17696-38fe-4fd8-95a3-00cec096aa97">
+          <AttributeID>Pesel</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a1edab9e-0c2c-4ed2-aa49-29ace7096a15">
+          <AttributeID>Doswiadczenie</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="273b7842-b2a3-4950-8665-17c68e978226">
+          <AttributeID>Wynagrodzenie</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d633444f-7d47-40ee-a1a0-ec6488bd1c41">
+      <ID>W Projekt</ID>
+      <Name>W Projekt</Name>
+      <DimensionID>W Projekt</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="fb362840-18a0-4fbf-b855-d1ec0d1770fc">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="637d138a-1b22-473b-92cc-2ea003f9249b">
+          <AttributeID>Tempo Realizacji Smieci Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47df8c3b-1e90-4ee1-ada5-84e3d6bc68c9">
+          <AttributeID>Data Rozpoczecia</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ba960b2-f194-4fc8-8345-8d953bad1c0d">
+          <AttributeID>Data Zakonczenia</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="06f54a1e-6bdb-43b8-8ce2-f6d038d1ca44">
+          <AttributeID>Nazwa</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="86d6ae84-4254-4137-954b-b5968f9ab686">
+          <AttributeID>Liczba Pracownikow</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2fa6266b-d195-4633-bb37-88f2f59f4a7a">
+          <AttributeID>Czas Trwania</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f3afed6b-745b-41f4-b844-ce1c3d899640">
+      <ID>W Klient</ID>
+      <Name>W Klient</Name>
+      <DimensionID>W Klient</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d85bdee6-1fbe-4dcf-a577-350260060639">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e46016c8-80bb-481a-b50f-60518a5dbd96">
+          <AttributeID>Nazwa</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="989e7cdd-7480-4f0a-8f3c-674dacb3bf42">
+          <AttributeID>Branza</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="25710810-9985-4150-a828-192e15a616e1">
+      <ID>W Technologia</ID>
+      <Name>W Technologia</Name>
+      <DimensionID>W Technologia</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c846632b-38a1-4d34-8d02-610f74af2f88">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e2cf751-4ef5-46d0-8dfb-6777546472eb">
+          <AttributeID>Typ</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1578e80f-6102-4b7e-ab03-eeeb753dfaff">
+          <AttributeID>Nazwa</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="111af82d-5803-4ef7-97ea-36b89387a283">
+          <AttributeID>Wersja</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="96b8ef28-bcfb-4fa4-9100-f552d660479d">
+      <ID>F Pracownik w Projekcie</ID>
+      <Name>F Pracownik w Projekcie</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="09716ed9-2116-49ef-abcc-6f47de97fe56">
+          <ID>Czas Trwania</ID>
+          <Name>Czas Trwania</Name>
+          <Source dwd:design-time-name="2e785fdb-5bd1-44d0-b1bd-dc2917952bcf">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ae09c7fe-9d95-45cd-b5df-5b52461a36cf">
+              <TableID>dbo_F_pracownik_w_projekcie</TableID>
+              <ColumnID>czas_trwania</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="8c1f6edc-7cd4-4995-9da7-23cbb9c6d455">
+          <ID>Uzyskany Dochod</ID>
+          <Name>Uzyskany Dochod</Name>
+          <Source dwd:design-time-name="5b52ceea-fa7b-48f6-a131-69392e410a45">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="84bc9f74-4b43-47cd-9858-51a81e7ba4dc">
+              <TableID>dbo_F_pracownik_w_projekcie</TableID>
+              <ColumnID>uzyskany_dochod</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d6dcf3a8-4761-4ddf-b3a7-3633487fe507">
+          <ID>F Pracownik w Projekcie Count</ID>
+          <Name>F Pracownik w Projekcie Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d23df7cd-100f-48ee-82e9-e2e54f49026d">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="0e66131d-4b15-4e27-921e-8831e5f70eba">
+              <TableID>dbo_F_pracownik_w_projekcie</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="86548674-1378-4083-aca4-d03b21e2de74">
+          <CubeDimensionID>W Pracownik</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ec3f35b8-88ef-41a6-8eb5-6635731c718e">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e0c7ed4d-0cd6-45c7-af7b-4fadc9c8bd65">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f84c6218-4be1-468a-9512-714a7e98718f">
+                    <TableID>dbo_F_pracownik_w_projekcie</TableID>
+                    <ColumnID>pracownik_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b16ae7d4-d731-4023-b8da-912b8d6e62c2">
+          <CubeDimensionID>Czy Odszedl Smieci</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4c7337a6-76ac-47a3-86cb-c3035ebf262c">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0f1407dd-9da6-4659-b83c-34393e47b9b1">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="62bbb4b5-3dc9-4c67-bc55-22796a93c504">
+                    <TableID>dbo_F_pracownik_w_projekcie</TableID>
+                    <ColumnID>czy_odszedl_smieci_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6700900e-2f29-4da2-92e8-7533808c381d">
+          <CubeDimensionID>Data Rozpoczecia</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="daef6152-4331-4f54-ba23-5b8f70777d09">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="04ac2b87-e146-4846-94a1-1df8d017aabf">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0cee4ba7-27b7-4c9a-984e-b8a9a9449ede">
+                    <TableID>dbo_F_pracownik_w_projekcie</TableID>
+                    <ColumnID>data_rozpoczecia</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="878c1e23-d471-4c31-9d6c-aaf45610c532">
+          <CubeDimensionID>Tempo Pracy Smieci</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d109011c-ef2b-4fcd-89b2-fb93822731e3">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fde877a5-7610-4104-96b0-79b24ef73898">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="58f2cbf2-2965-48c4-8da9-d78e04b09f18">
+                    <TableID>dbo_F_pracownik_w_projekcie</TableID>
+                    <ColumnID>tempo_pracy_smieci_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="eb6acfc6-8b75-47c2-8e65-c729c11f9b64">
+          <CubeDimensionID>Data Zakonczenia</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3e4fc7f4-7698-4a9a-bb2d-42033756eafe">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c5e5cb98-133f-4ddb-8c13-d60831293c1c">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9a94ffc7-f8eb-4d29-ba23-4a78c5cf16bd">
+                    <TableID>dbo_F_pracownik_w_projekcie</TableID>
+                    <ColumnID>data_zakonczenia</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="816bcb59-e721-4bbd-9ba8-0a797ec9a621">
+          <CubeDimensionID>W Projekt</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="eca824b9-60ad-43b0-ab47-e3dbff04aa6e">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7fd87a13-568e-414b-bdb5-6b94279dc849">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f781449e-e2e3-455a-8ff5-bacf3e823a5a">
+                    <TableID>dbo_F_pracownik_w_projekcie</TableID>
+                    <ColumnID>projekt_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="82e24f02-eba3-47be-92f5-e39dec2bd4b3">
+          <CubeDimensionID>W Klient</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ae89b3d0-5f8d-4399-9ae4-dbd7096810a0">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f75ca852-9bf2-4afa-8247-9bbab1fe0283">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="05a5f151-d61f-4e38-ab41-df066c64457f">
+                    <TableID>dbo_F_pracownik_w_projekcie</TableID>
+                    <ColumnID>klient_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0286f1f4-df63-46d8-b485-8f28b8fc4b5e">
+          <CubeDimensionID>Etap Smieci</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="66c5dfef-1f32-4cd7-83f4-4f890555eb30">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="452a5c20-9cda-4743-9c03-1c59d26a922e">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="72d29461-59a0-40f6-9017-45d4afdbb5a8">
+                    <TableID>dbo_F_pracownik_w_projekcie</TableID>
+                    <ColumnID>etap_smieci_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="1c356484-b26e-46f4-a0f8-3e9ba21e2ea6">
+          <CubeDimensionID>W Technologia</CubeDimensionID>
+          <MeasureGroupID>F Technologie Pracownika</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="1baf9f79-7344-4e67-a451-c72c44dffcca">
+          <CubeDimensionID>Projekt - Tempo Realizacji Smieci</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="06edbdeb-9a8d-4cc6-8199-e8c918eca788">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>W Projekt</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Tempo Realizacji Smieci Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="dcb8d672-d34f-4f0a-83aa-3f8433ef2f1a">
+          <CubeDimensionID>Projekt - Data Rozpoczecia</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="432349bd-3864-49a9-98e7-da12700525fb">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>W Projekt</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Data Rozpoczecia</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="a4dff776-7670-4755-8967-18e7063e0ff7">
+          <CubeDimensionID>Projekt - Data Zakonczenia</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b8e99853-1a07-46d7-b059-b6b531ee7cf6">
+              <AttributeID>Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>W Projekt</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Data Zakonczenia</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="7a96012e-639d-4269-b8c0-e78c890b5eba">
+      <ID>F Technologie Pracownika</ID>
+      <Name>F Technologie Pracownika</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e585a28c-03fe-4ca3-b987-594a7a9b4374">
+          <ID>F Technologie Pracownika Count</ID>
+          <Name>F Technologie Pracownika Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="9958aad6-43d7-425e-a8da-7a94a43004a1">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="d4f2c7d2-847f-4918-b875-94309046a5c4">
+              <TableID>dbo_F_technologie_pracownika</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2f743d04-28cc-49bc-bdfb-5eaeb81425ae">
+          <CubeDimensionID>W Pracownik</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e63e470d-4c61-4076-af50-12a24aa08ecd">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f437b716-aa40-4816-a1a4-d3e04ddedbfd">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="31d2e961-ee5f-44a7-a192-70dc68b34385">
+                    <TableID>dbo_F_technologie_pracownika</TableID>
+                    <ColumnID>pracownik_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6eaea017-935d-426d-b8f2-16ea9710a1e5">
+          <CubeDimensionID>W Technologia</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="faa518c7-9042-4889-8d20-4e86b36aabfe">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="83a71da5-f556-4d0f-9587-5a7368cde91c">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e11bce89-93e8-4e14-b14d-b2cb39eca82c">
+                    <TableID>dbo_F_technologie_pracownika</TableID>
+                    <ColumnID>technologia_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="aa725e47-27bf-42cf-a83e-5ab51179ec3d">
+    <DataSourceViewID>Hddb</DataSourceViewID>
+  </Source>
+</Cube>

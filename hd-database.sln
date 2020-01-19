@@ -5,18 +5,33 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "hd-database", "hd-database\hd-database.sqlproj", "{49F25F7D-27A2-4E76-A2B0-F649C66932A3}"
 EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "hd-cube", "hd-cube\hd-cube.dwproj", "{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Development|Any CPU.Deploy.0 = Debug|Any CPU
 		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49F25F7D-27A2-4E76-A2B0-F649C66932A3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Debug|Any CPU.ActiveCfg = Development
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Debug|Any CPU.Build.0 = Development
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Debug|Any CPU.Deploy.0 = Development
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Development|Any CPU.ActiveCfg = Development
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Development|Any CPU.Build.0 = Development
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Development|Any CPU.Deploy.0 = Development
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Release|Any CPU.ActiveCfg = Development
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Release|Any CPU.Build.0 = Development
+		{0CB68B4A-99DD-4E69-A1F3-0D0F16103136}.Release|Any CPU.Deploy.0 = Development
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
