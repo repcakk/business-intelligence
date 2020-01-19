@@ -42,6 +42,8 @@ NAZWISKA = (
     'Iwanienko',
 )
 
+VALID_SMIECI_ID = ('1', '2', '3',)
+
 def imie_nazwisko():
     imie = random.choice(IMIONA)
     nazwisko = random.choice(NAZWISKA)
@@ -106,23 +108,25 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
             czas_trwania = (pr_pr_end[2] - pr_pr_begin[2]).days
 
             values_line = (
-                "({id}, {czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
+                "({id}, {czas_trwania}, {pracownik_id}, {projekt_id}, {czy_odszedl_smieci_id}"
                 ", {klient_id}, {etap}, {data_rozpoczecia}, {data_zakonczenia}"
-                ", {tempo_pracy}, {uzyskany_dochod}"
+                ", {tempo_pracy_smieci_id}, {uzyskany_dochod}"
                 ")"
             ).format(
                 id = F_pracownik_w_projekcie_id,
                 czas_trwania = czas_trwania,
                 pracownik_id = each['id'],
                 projekt_id = pr['id'],
-                smieci_id = 2,  # FIXME Niech nikt nie odchodzi. Zapewnienie spójności
+                czy_odszedl_smieci_id = repr(random.choice((1, 2, 3,))),
+				#smieci_id = 2,  # FIXME Niech nikt nie odchodzi. Zapewnienie spójności
                                 # między datami odejścia w różnych projektach byłoby
                                 # okrutnie czasochłonne.
                 klient_id = random.choice(klient)['id'],
                 etap = repr(random.choice(('projektowanie', 'prototyp', 'implementacja',))),
                 data_rozpoczecia = pr_pr_begin[0],
                 data_zakonczenia = pr_pr_end[0],
-                tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
+				#tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
+                tempo_pracy_smieci_id = repr(random.choice((1, 2, 3, 4, 5, 6))),
                 uzyskany_dochod = random.randint(100_000, 10_000_000),
             )
             values.append(values_line)
@@ -150,23 +154,25 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
         czas_trwania = (pr_pr_end[2] - pr_pr_begin[2]).days
 
         values_line = (
-            "({id}, {czas_trwania}, {pracownik_id}, {projekt_id}, {smieci_id}"
+            "({id}, {czas_trwania}, {pracownik_id}, {projekt_id}, {czy_odszedl_smieci_id}"
             ", {klient_id}, {etap}, {data_rozpoczecia}, {data_zakonczenia}"
-            ", {tempo_pracy}, {uzyskany_dochod}"
+            ", {tempo_pracy_smieci_id}, {uzyskany_dochod}"
             ")"
         ).format(
             id = F_pracownik_w_projekcie_id,
             czas_trwania = czas_trwania,
             pracownik_id = each['id'],
             projekt_id = pr['id'],
-            smieci_id = 2,  # FIXME Niech nikt nie odchodzi. Zapewnienie spójności
+			czy_odszedl_smieci_id = repr(random.choice((1, 2, 3,))),
+            #smieci_id = 2,  # FIXME Niech nikt nie odchodzi. Zapewnienie spójności
                             # między datami odejścia w różnych projektach byłoby
                             # okrutnie czasochłonne.
             klient_id = random.choice(klient)['id'],
             etap = repr(random.choice(('projektowanie', 'prototyp', 'implementacja',))),
             data_rozpoczecia = pr_pr_begin[0],
             data_zakonczenia = pr_pr_end[0],
-            tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
+            #tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
+			tempo_pracy_smieci_id = repr(random.choice((1, 2, 3, 4, 5, 6))),
             uzyskany_dochod = random.randint(100_000, 10_000_000),
         )
         values.append(values_line)
@@ -532,7 +538,8 @@ def W_projekt(lower_dates, upper_dates): # done
 def W_smieci(): # done
     insert_statement = "INSERT INTO W_smieci values\n  {}\n;"
 
-    values = ["(1, 'tak')", "(2, 'nie')",]
+    values = ["(1, 'nie', 'niskie')", "(2, 'nie', 'srednie')", "(3, 'nie', 'wysokie')",
+			  "(4, 'tak', 'niskie')", "(5, 'tak', 'srednie')", "(6, 'tak', 'wysokie')",]
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
