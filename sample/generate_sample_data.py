@@ -42,8 +42,6 @@ NAZWISKA = (
     'Iwanienko',
 )
 
-VALID_SMIECI_ID = ('1', '2', '3',)
-
 def imie_nazwisko():
     imie = random.choice(IMIONA)
     nazwisko = random.choice(NAZWISKA)
@@ -109,7 +107,7 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
 
             values_line = (
                 "({id}, {czas_trwania}, {pracownik_id}, {projekt_id}, {czy_odszedl_smieci_id}"
-                ", {klient_id}, {etap}, {data_rozpoczecia}, {data_zakonczenia}"
+                ", {klient_id}, {etap_smieci_id}, {data_rozpoczecia}, {data_zakonczenia}"
                 ", {tempo_pracy_smieci_id}, {uzyskany_dochod}"
                 ")"
             ).format(
@@ -122,7 +120,7 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
                                 # między datami odejścia w różnych projektach byłoby
                                 # okrutnie czasochłonne.
                 klient_id = random.choice(klient)['id'],
-                etap = repr(random.choice(('projektowanie', 'prototyp', 'implementacja',))),
+                etap_smieci_id = repr(random.choice((1, 7, 13))),
                 data_rozpoczecia = pr_pr_begin[0],
                 data_zakonczenia = pr_pr_end[0],
 				#tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
@@ -155,7 +153,7 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
 
         values_line = (
             "({id}, {czas_trwania}, {pracownik_id}, {projekt_id}, {czy_odszedl_smieci_id}"
-            ", {klient_id}, {etap}, {data_rozpoczecia}, {data_zakonczenia}"
+            ", {klient_id}, {etap_smieci_id}, {data_rozpoczecia}, {data_zakonczenia}"
             ", {tempo_pracy_smieci_id}, {uzyskany_dochod}"
             ")"
         ).format(
@@ -168,7 +166,7 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
                             # między datami odejścia w różnych projektach byłoby
                             # okrutnie czasochłonne.
             klient_id = random.choice(klient)['id'],
-            etap = repr(random.choice(('projektowanie', 'prototyp', 'implementacja',))),
+            etap_smieci_id = repr(random.choice((1, 7, 13))),
             data_rozpoczecia = pr_pr_begin[0],
             data_zakonczenia = pr_pr_end[0],
             #tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
@@ -538,8 +536,14 @@ def W_projekt(lower_dates, upper_dates): # done
 def W_smieci(): # done
     insert_statement = "INSERT INTO W_smieci values\n  {}\n;"
 
-    values = ["(1, 'nie', 'niskie')", "(2, 'nie', 'srednie')", "(3, 'nie', 'wysokie')",
-			  "(4, 'tak', 'niskie')", "(5, 'tak', 'srednie')", "(6, 'tak', 'wysokie')",]
+    values = ["(1, 'nie', 'niskie', 'projekt')", "(2, 'nie', 'srednie', 'projekt')", "(3, 'nie', 'wysokie', 'projekt')",
+			  "(4, 'tak', 'niskie', 'projekt')", "(5, 'tak', 'srednie', 'projekt')", "(6, 'tak', 'wysokie', 'projekt')",
+			  
+			  "(7, 'nie', 'niskie', 'prototyp')", "(8, 'nie', 'srednie', 'prototyp')", "(9, 'nie', 'wysokie', 'prototyp')",
+			  "(10, 'tak', 'niskie', 'prototyp')", "(11, 'tak', 'srednie', 'prototyp')", "(12, 'tak', 'wysokie', 'prototyp')",
+			  
+			  "(13, 'nie', 'niskie', 'implementacja')", "(14, 'nie', 'srednie', 'implementacja')", "(15, 'nie', 'wysokie', 'implementacja')",
+			  "(16, 'tak', 'niskie', 'implementacja')", "(17, 'tak', 'srednie', 'implementacja')", "(18, 'tak', 'wysokie', 'implementacja')",]
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
