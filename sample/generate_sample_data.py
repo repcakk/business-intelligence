@@ -514,14 +514,14 @@ def W_projekt(lower_dates, upper_dates): # done
         raw_values.append({
             'id': i,
             'nazwa': repr(nazwa()),
-            'tempo_realizacji': repr(random.choice(('przed czasem', 'o czasie', 'po czasie',))),
+            'tempo_realizacji_smieci_id': repr(random.choice((1, 2, 3, 4, 5, 6))),
             'liczba_pracownikow': repr(random.choice(('mała', 'średnia', 'duża',))),
             'czas_trwania': (data_zakonczenia[2] - data_rozpoczecia[2]).days,
             'data_rozpoczecia': data_rozpoczecia[0],
             'data_zakonczenia': data_zakonczenia[0],
         })
         values_line = (
-            "({id}, {nazwa}, {tempo_realizacji}, {liczba_pracownikow}, {czas_trwania}"
+            "({id}, {nazwa}, {tempo_realizacji_smieci_id}, {liczba_pracownikow}, {czas_trwania}"
             ", {data_rozpoczecia}, {data_zakonczenia}) -- {dt_b} - {dt_e}"
         )
         values.append(values_line.format(
@@ -614,11 +614,12 @@ def W_technologia(): # done
 # Main function
 
 def main():
+    W_smieci()
     lower_dates, upper_dates, raw_dates = W_data()
     klient = W_klient()
     pracownik = W_pracownik()
     projekt = W_projekt(lower_dates, upper_dates)
-    W_smieci()
+    
     technologia = W_technologia()
 
     F_technologie_pracownika(len(pracownik), len(technologia))
