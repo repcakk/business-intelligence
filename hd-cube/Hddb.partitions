@@ -1,17 +1,57 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b0040057-3438-47cd-8640-fd57df0eb5b8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e1ca8bef-d225-4ed9-a59e-ad27193a5d42" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Hddb</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>F Pracownik w Projekcie</ID>
       <Partitions>
-        <Partition dwd:design-time-name="1c3fdaa0-10c7-41b7-8c88-05d04a0b039b">
+        <Partition dwd:design-time-name="81fbff1e-a055-411a-9886-4359ded17d3c">
           <ID>F Pracownik w Projekcie</ID>
           <Name>F Pracownik w Projekcie</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7b5a0f68-a84e-4b33-b394-9b2a60261d7a">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="71e507a7-ad8f-4571-84af-f7181aea0fa3">
+            <DataSourceViewID>Hddb</DataSourceViewID>
+            <TableID>dbo_F_pracownik_w_projekcie</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>F Pracownik w Projekcie 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="2b35da2e-ab12-4056-900b-63bb0995a1c9">
+          <ID>F Pracownik w Projekcie</ID>
+          <Name>F Pracownik w Projekcie</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="5d8eeb81-3585-4583-a7f6-6958719b6b77">
+            <DataSourceViewID>Hddb</DataSourceViewID>
+            <TableID>dbo_F_pracownik_w_projekcie</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>F Pracownik w Projekcie 2</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="932b6be7-00c9-4b23-901b-54dd77e857ce">
+          <ID>F Pracownik w Projekcie</ID>
+          <Name>F Pracownik w Projekcie</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="becb877e-39e6-44e3-bf5b-c120b9089991">
             <DataSourceViewID>Hddb</DataSourceViewID>
             <TableID>dbo_F_pracownik_w_projekcie</TableID>
           </Source>
@@ -24,14 +64,14 @@
     <MeasureGroup>
       <ID>F Technologie Pracownika</ID>
       <Partitions>
-        <Partition dwd:design-time-name="d2361e9f-fb9c-4aed-b5dd-12fe5c7574a8">
+        <Partition dwd:design-time-name="df0f7935-a5c4-4b3c-b1ce-d6327272a828">
           <ID>F Technologie Pracownika</ID>
           <Name>F Technologie Pracownika</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="720ac8ca-7b95-48a6-842f-0cd5f9de33ff">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="136f852b-db61-4efd-a972-dee846074b88">
             <DataSourceViewID>Hddb</DataSourceViewID>
             <TableID>dbo_F_technologie_pracownika</TableID>
           </Source>
