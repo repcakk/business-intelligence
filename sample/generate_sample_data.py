@@ -42,6 +42,10 @@ NAZWISKA = (
     'Iwanienko',
 )
 
+VALID_CZY_ODSZEDL_ID = (1, 2, 3,)
+VALID_ETAP_ID = (1, 7, 13,)
+VALID_TEMPO_PRACY_ID = (1, 2, 3, 4, 5, 6,)
+
 def imie_nazwisko():
     imie = random.choice(IMIONA)
     nazwisko = random.choice(NAZWISKA)
@@ -115,16 +119,16 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
                 czas_trwania = czas_trwania,
                 pracownik_id = each['id'],
                 projekt_id = pr['id'],
-                czy_odszedl_smieci_id = repr(random.choice((1, 2, 3,))),
+                czy_odszedl_smieci_id = repr(random.choice(VALID_CZY_ODSZEDL_ID)),
 				#smieci_id = 2,  # FIXME Niech nikt nie odchodzi. Zapewnienie spójności
                                 # między datami odejścia w różnych projektach byłoby
                                 # okrutnie czasochłonne.
                 klient_id = random.choice(klient)['id'],
-                etap_smieci_id = repr(random.choice((1, 7, 13))),
+                etap_smieci_id = repr(random.choice(VALID_ETAP_ID)),
                 data_rozpoczecia = pr_pr_begin[0],
                 data_zakonczenia = pr_pr_end[0],
 				#tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
-                tempo_pracy_smieci_id = repr(random.choice((1, 2, 3, 4, 5, 6))),
+                tempo_pracy_smieci_id = repr(random.choice(VALID_TEMPO_PRACY_ID)),
                 uzyskany_dochod = random.randint(100_000, 10_000_000),
             )
             values.append(values_line)
@@ -161,16 +165,16 @@ def F_pracownik_w_projekcie(pracownik, projekt, klient, all_dates):
             czas_trwania = czas_trwania,
             pracownik_id = each['id'],
             projekt_id = pr['id'],
-			czy_odszedl_smieci_id = repr(random.choice((1, 2, 3,))),
+			czy_odszedl_smieci_id = repr(random.choice(VALID_CZY_ODSZEDL_ID)),
             #smieci_id = 2,  # FIXME Niech nikt nie odchodzi. Zapewnienie spójności
                             # między datami odejścia w różnych projektach byłoby
                             # okrutnie czasochłonne.
             klient_id = random.choice(klient)['id'],
-            etap_smieci_id = repr(random.choice((1, 7, 13))),
+            etap_smieci_id = repr(random.choice(VALID_ETAP_ID)),
             data_rozpoczecia = pr_pr_begin[0],
             data_zakonczenia = pr_pr_end[0],
             #tempo_pracy = repr(random.choice(('niskie', 'średnie', 'wysokie',))),
-			tempo_pracy_smieci_id = repr(random.choice((1, 2, 3, 4, 5, 6))),
+			tempo_pracy_smieci_id = repr(random.choice(VALID_TEMPO_PRACY_ID)),
             uzyskany_dochod = random.randint(100_000, 10_000_000),
         )
         values.append(values_line)
@@ -536,14 +540,28 @@ def W_projekt(lower_dates, upper_dates): # done
 def W_smieci(): # done
     insert_statement = "INSERT INTO W_smieci values\n  {}\n;"
 
-    values = ["(1, 'nie', 'niskie', 'projekt')", "(2, 'nie', 'srednie', 'projekt')", "(3, 'nie', 'wysokie', 'projekt')",
-			  "(4, 'tak', 'niskie', 'projekt')", "(5, 'tak', 'srednie', 'projekt')", "(6, 'tak', 'wysokie', 'projekt')",
-			  
-			  "(7, 'nie', 'niskie', 'prototyp')", "(8, 'nie', 'srednie', 'prototyp')", "(9, 'nie', 'wysokie', 'prototyp')",
-			  "(10, 'tak', 'niskie', 'prototyp')", "(11, 'tak', 'srednie', 'prototyp')", "(12, 'tak', 'wysokie', 'prototyp')",
-			  
-			  "(13, 'nie', 'niskie', 'implementacja')", "(14, 'nie', 'srednie', 'implementacja')", "(15, 'nie', 'wysokie', 'implementacja')",
-			  "(16, 'tak', 'niskie', 'implementacja')", "(17, 'tak', 'srednie', 'implementacja')", "(18, 'tak', 'wysokie', 'implementacja')",]
+    values = (
+        "(1, 'nie', 'niskie', 'projekt')",
+        "(2, 'nie', 'srednie', 'projekt')",
+        "(3, 'nie', 'wysokie', 'projekt')",
+        "(4, 'tak', 'niskie', 'projekt')",
+        "(5, 'tak', 'srednie', 'projekt')",
+        "(6, 'tak', 'wysokie', 'projekt')",
+
+        "(7, 'nie', 'niskie', 'prototyp')",
+        "(8, 'nie', 'srednie', 'prototyp')",
+        "(9, 'nie', 'wysokie', 'prototyp')",
+        "(10, 'tak', 'niskie', 'prototyp')",
+        "(11, 'tak', 'srednie', 'prototyp')",
+        "(12, 'tak', 'wysokie', 'prototyp')",
+
+        "(13, 'nie', 'niskie', 'implementacja')",
+        "(14, 'nie', 'srednie', 'implementacja')",
+        "(15, 'nie', 'wysokie', 'implementacja')",
+        "(16, 'tak', 'niskie', 'implementacja')",
+        "(17, 'tak', 'srednie', 'implementacja')",
+        "(18, 'tak', 'wysokie', 'implementacja')",
+    )
 
     if inhibit_emission(values): return
     print(insert_statement.format("\n, ".join(values)))
@@ -623,7 +641,7 @@ def main():
     klient = W_klient()
     pracownik = W_pracownik()
     projekt = W_projekt(lower_dates, upper_dates)
-    
+
     technologia = W_technologia()
 
     F_technologie_pracownika(len(pracownik), len(technologia))
